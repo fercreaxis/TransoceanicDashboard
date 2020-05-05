@@ -1,0 +1,111 @@
+<div class="panel-header panel-header-sm"></div>
+<div class="main-content">
+  <div class="row">
+    <div class="col-md-12">
+      <div class="card">
+        <div class="card-header"><h5 class="title">Registro de Pago</h5></div>
+        <div class="card-body">
+          <form *ngIf="c">
+            <div class="row">
+              <div class="col-md-6">
+                <div class="col-md-4">
+                  <p class="category">Pagar Valor Manual</p>
+                  <bSwitch
+                    [switch-on-color]="'blue'"
+                    [(ngModel)]="pagoManual"
+                    [switch-off-text]="'No'"
+                    [switch-on-text]="'Si'"
+                    (changeState)="cambiaOpcionPagoManual($event)"
+                    name="pagomanual"
+                  >
+                    Pagar Otro Valor
+                  </bSwitch>
+                </div>
+              </div>
+            </div>
+
+            <div class="row">
+              <div class="col-md-3">
+                <div *ngIf="!pagoManual" class="card card-stats">
+                  <div class="card-body">
+                    <div class="statistics statistics-horizontal">
+                      <div class="info info-horizontal">
+                        <div class="row">
+                          <div class="col-5">
+                            <div class="icon icon-primary icon-circle">
+                              <i class="now-ui-icons business_briefcase-24"></i>
+                            </div>
+                          </div>
+                          <div class="col-7 text-right">
+                            <h3 class="info-title">
+                              <span>$</span
+                              >{{ c.saldoActual | number: "1.2-2" }}
+                            </h3>
+                            <h6 class="stats-title">Pagar Saldo Actual</h6>
+                          </div>
+                        </div>
+                      </div>
+                    </div>
+                  </div>
+                  <hr />
+                  <div class="card-footer">
+                    <div class="stats">
+                      <button class="btn btn-primary" (click)="siguiente()">
+                        Siguiente
+                      </button>
+                    </div>
+                  </div>
+                </div>
+
+                <div *ngIf="pagoManual" class="card card-stats">
+                  <div class="card-body">
+                    <div class="statistics statistics-horizontal">
+                      <div class="info info-horizontal">
+                        <div class="row">
+                          <div class="col-5">
+                            <div class="icon icon-primary icon-circle">
+                              <i class="now-ui-icons business_briefcase-24"></i>
+                            </div>
+                          </div>
+                          <div class="col-7 text-right">
+                            <h3 class="info-title">
+                              <span>$</span
+                              >{{ c.saldoActual | number: "1.2-2" }}
+                            </h3>
+                            <h6 class="stats-title">Saldo Total</h6>
+                          </div>
+                        </div>
+                        <div class="row">
+                          <div class="col-md-12">
+                            <div class="form-group">
+                              <label>Valor a Pagar</label>
+                              <input
+                                type="number"
+                                class="form-control"
+                                placeholder="Valor a Pagar"
+                                [(ngModel)]="valorPagar"
+                                name="valorpagar"
+                              />
+                            </div>
+                          </div>
+                        </div>
+                      </div>
+                    </div>
+                  </div>
+                  <hr />
+                  <div class="card-footer">
+                    <div class="stats">
+                      <button class="btn btn-primary" (click)="siguiente()">
+                        Siguiente
+                      </button>
+                    </div>
+                  </div>
+                </div>
+              </div>
+            </div>
+          </form>
+        </div>
+      </div>
+    </div>
+  </div>
+</div>

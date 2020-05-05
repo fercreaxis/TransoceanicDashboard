@@ -1,0 +1,66 @@
+<div class="main-content">
+  <div class="container">
+    <div class="col-md-4 ml-auto mr-auto">
+      <div class="form">
+        <div class="card card-login card-plain">
+          <div class="card-header ">
+            <div>
+              <img src="assets/img/now-logo.png" alt="" />
+            </div>
+          </div>
+          <div class="card-body ">
+            <div
+              class="input-group no-border form-control-lg"
+              [ngClass]="{ 'input-group-focus': focus === true }"
+            >
+              <span class="input-group-prepend">
+                <div class="input-group-text">
+                  <i class="now-ui-icons users_single-02"></i>
+                </div>
+              </span>
+              <input
+                type="text"
+                class="form-control"
+                placeholder="Codigo Usuario"
+                [(ngModel)] = "codigo"
+                name = "codigo"
+              />
+            </div>
+            <div
+              class="input-group no-border form-control-lg"
+              [ngClass]="{ 'input-group-focus': focus2 === true }"
+            >
+              <div class="input-group-prepend">
+                <div class="input-group-text">
+                  <i class="now-ui-icons objects_key-25"></i>
+                </div>
+              </div>
+              <input
+                type="password"
+                placeholder="PIN"
+                class="form-control"
+                [(ngModel)] = "pin"
+                name = "pin"
+
+              />
+            </div>
+          </div>
+          <div class="card-footer ">
+            <a
+              (click) = "login()"
+              href="#"
+              class="btn btn-primary btn-round btn-lg btn-block mb-3"
+              >INGRESAR</a
+            >
+            <div style="background-color: pink;" class="pull-left">
+              <h6>
+              </h6>
+            </div>
+            <div class="pull-right">
+            </div>
+          </div>
+        </div>
+      </div>
+    </div>
+  </div>
+</div>
