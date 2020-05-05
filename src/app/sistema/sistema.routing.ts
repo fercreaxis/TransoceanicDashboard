@@ -6,12 +6,12 @@ import { Routes } from '@angular/router';
 export const SistemaRoutes: Routes = [
   {
     path: '',
-    children: [
-      {
-        path: 'inicio',
+    redirectTo: 'inicio',
+    pathMatch: 'full'
+  },
+  {
+    path: 'inicio',
         component: InicioComponent
-      }
-    ]
   },
   {
     path: '',

@@ -3,7 +3,6 @@ import { AuxiliarService } from './../../lib/auxiliar.service';
 import { FiltroConsulta } from './../../models/filtroconsulta.model';
 import { Cliente } from './../../models/cliente.model';
 import { Component, OnInit } from '@angular/core';
-import * as Chartist from 'chartist';
 
 @Component({
   selector: 'app-dashboard',

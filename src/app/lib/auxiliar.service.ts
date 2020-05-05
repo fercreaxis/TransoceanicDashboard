@@ -34,7 +34,7 @@ export class AuxiliarService {
   constructor(protected _http: HttpClient, private toastr: ToastrService) {}
 
   public getNombreSistema() {
-    return 'TransOceanic Client Services - v.05.01.20';
+    return 'TransOceanic Client Services - v.05.05.20';
   }
 
 

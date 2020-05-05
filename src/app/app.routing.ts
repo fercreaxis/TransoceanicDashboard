@@ -8,7 +8,7 @@ export const AppRoutes: Routes = [
   {
     path: '',
     redirectTo: 'dashboard',
-    pathMatch: 'full'
+    pathMatch: 'full',
   },
   {
     path: '',
@@ -16,44 +16,15 @@ export const AppRoutes: Routes = [
     children: [
       {
         path: '',
-        loadChildren: './pages/dashboard/dashboard.module#DashboardModule',
-        canActivate: [AuthGuard]
-      },
-      {
-        path: 'components',
-        loadChildren:
-          './pages/components/components.module#ComponentsPageModule'
-      },
-      {
-        path: 'tables',
-        loadChildren: './pages/tables/tables.module#TablesModule'
-      },
-      {
-        path: 'maps',
-        loadChildren: './pages/maps/maps.module#MapsModule'
-      },
-      {
-        path: 'charts',
-        loadChildren: './pages/charts/charts.module#ChartsModule'
-      },
-      {
-        path: 'calendar',
-        loadChildren: './pages/calendar/calendar.module#CalendarModulee'
+        loadChildren: './sistema/sistema.module#SistemaModule',
+        canActivate: [AuthGuard],
       },
       {
         path: 'sistema',
-        loadChildren: './sistema/sistema.module#SistemaModule'
+        loadChildren: './sistema/sistema.module#SistemaModule',
+        canActivate: [AuthGuard],
       },
-      {
-        path: '',
-        loadChildren:
-          './pages/pages/user-profile/user-profile.module#UserModule'
-      },
-      {
-        path: '',
-        loadChildren: './pages/pages/timeline/timeline.module#TimelineModule'
-      }
-    ]
+    ],
   },
   {
     path: '',
@@ -61,8 +32,8 @@ export const AppRoutes: Routes = [
     children: [
       {
         path: 'pages',
-        loadChildren: './pages/pages/pages.module#PagesModule'
-      }
-    ]
-  }
+        loadChildren: './pages/pages/pages.module#PagesModule',
+      },
+    ],
+  },
 ];

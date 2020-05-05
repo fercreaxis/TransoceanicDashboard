@@ -27,7 +27,7 @@ export interface ChildrenItems {
 // Menu Items
 export const ROUTES: RouteInfo[] = [
   {
-    path: '/dashboard',
+    path: '/sistema',
     title: 'Inicio',
     type: 'link',
     icontype: 'design_app',
