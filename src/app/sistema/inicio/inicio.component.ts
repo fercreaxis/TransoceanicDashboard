@@ -11,7 +11,6 @@ import { Component, OnInit } from '@angular/core';
 })
 export class InicioComponent implements OnInit {
 
- 
   c: Cliente;
 
   constructor(public auxiliar: AuxiliarService,

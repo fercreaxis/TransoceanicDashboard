@@ -132,6 +132,19 @@ export class AuxiliarService {
         timeOut: 4000,
         closeButton: true,
         enableHtml: true,
+        toastClass: 'alert alert-info alert-with-icon',
+        positionClass: 'toast-top-right'
+      }
+    );
+  }
+
+  showToastError(message) {
+    this.toastr.show(
+      '<span class="now-ui-icons ui-1_bell-53"></span>', message,
+      {
+        timeOut: 4000,
+        closeButton: true,
+        enableHtml: true,
         toastClass: 'alert alert-danger alert-with-icon',
         positionClass: 'toast-top-right'
       }

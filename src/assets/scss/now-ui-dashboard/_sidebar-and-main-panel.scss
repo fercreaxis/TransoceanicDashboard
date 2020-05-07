@@ -332,7 +332,7 @@
   }
 
   &[data-color="blue"] {
-    @include sidebar-color($info-color);
+    @include sidebar-color($primary-color);
   }
   &[data-color="green"] {
     @include sidebar-color($success-color);

@@ -45,6 +45,7 @@ export class LoginComponent implements OnInit, OnDestroy {
   }
 
   login() {
+    this.loading = true;
     const param = new Login();
 
     param.username = this.codigo;
@@ -56,10 +57,11 @@ export class LoginComponent implements OnInit, OnDestroy {
       const retorno: Login = results;
       retorno.username = this.codigo;
       if (this.auxiliar.inicializarLogin(retorno)) {
-        this.router.navigateByUrl('/dashboard');
+        this.router.navigateByUrl('/sistema/inicio');
       }
 
     }, error => {
+      this.loading = false;
       this.auxiliar.msgErrorDB('Error', error);
     }
     );

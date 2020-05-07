@@ -1,3 +1,4 @@
+
 <div class="main-content">
   <div class="container">
     <div class="col-md-4 ml-auto mr-auto">
@@ -52,15 +53,19 @@
               class="btn btn-primary btn-round btn-lg btn-block mb-3"
               >INGRESAR</a
             >
+
+
             <div style="background-color: pink;" class="pull-left">
               <h6>
               </h6>
-            </div>
-            <div class="pull-right">
             </div>
           </div>
         </div>
       </div>
     </div>
+      <div *ngIf = "loading" class="alert alert-info">
+        <span>Validando...</span>
+      </div>
+    
   </div>
 </div>
